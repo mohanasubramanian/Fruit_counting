@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Fruit Counter - Homepage </title>
+	<!-- Bootstrap core CSS -->
+	<!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+<link href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+	<!-- Fontawesome CSS -->
+	<!--<link href="css/all.css" rel="stylesheet">-->
+		<link href="{{ url_for('static',filename='css/all.css')}}" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<!--<link href="css/style.css" rel="stylesheet">-->
+	<link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet">
+<style>
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index">
+            <img src="static/logo.png" alt="logo" />
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link active" href="index">Home</a>
+                  </li>
+                 
+<li class="nav-item">
+                     <a class="nav-link" href="about">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="upload">Upload</a>
+                  </li>
+
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio">See Prices 
+     
+    </a>
+
+
+<div class="dropdown-content">
+                  <!--   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">-->
+                        <a class="dropdown-item" href="apple">Apple</a>
+                        <a class="dropdown-item" href="orange">Orange</a>
+                        <a class="dropdown-item" href="papaya">Papaya</a>
+                        <a class="dropdown-item" href="pineapple">Pineapple</a>
+                        <a class="dropdown-item" href="jackfruit">Jackfruit</a>
+                     </div>
+                  </li>
+                  
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact">Contact</a>
+                  </li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="slider-main">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+               <!-- Slide One - Set the background image for this slide in the line below -->
+               <div class="carousel-item active" style="background-image: url('static/c1.jpg')">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h3>Welcome to Fruit Detection and Couting </h3>
+            
+                  </div>
+               </div>
+               <!-- Slide Two - Set the background image for this slide in the line below -->
+               <div class="carousel-item" style="background-image: url('static/c2.jpg')">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h3>Beautiful Garden</h3>
+                     <p>A Great Theme For Garden Lawn Care</p>
+                  </div>
+               </div>
+               <!-- Slide Three - Set the background image for this slide in the line below -->
+               <div class="carousel-item" style="background-image: url('static/c3.jpg')">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h3>Welcome to N & LW Lawn Care</h3>
+                     <p>A Great Theme For Garden Lawn Care</p>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    <!-- Page Content -->
+   
+        <!-- About Section -->
+        <div class="about-main">
+            <div class="row">
+               <div class="col-lg-6">
+                  <h2>Welcome to our website!</h2>
+                  <h5> <ul> 
+<li>An innovative counting website that automatically counts the quantity of picked fruit is now available for the farmers. The app is very easy to                        use and allows fruit growers to analyze the quantity of picked fruit in real time, per hour, per day or per week.</li>
+                       <li>The fruits counting application shows the exact price of the fruits in that location and displays it in a very convenient manner. All the                         data can be displayed via mobile phone, tablet or PC.</li> 
+                       <li>The purpose of the new application is to help fruit growers optimize their fruits yield and picking performance while minimizing quality                            variances</li> 
+                       <li>This website is available in models for 5 fruits and available for cost estimation all over karnataka. The website is helpful in many ways                         as to get the exact amount manure and storage required for the farmer .Faster, easier, more cost effective, but above all with the deployment                         of far fewer personnel.</li>
+                       <li>The app has specialized in innovative techniques for decting of fruits such as apple, orange,pineapple,papaya and jackfruit, counting and                         provinding the right cost estimation of the fruits.</li>
+</ul> </h5>
+               </div>
+               <div class="col-lg-6">
+                  <img class="img-fluid rounded" src="static/farmer.jpg" alt="" />
+               </div>
+            </div>
+            <!-- /.row -->
+<center>
+        </div>
+        <!-- Portfolio Section -->
+
+        <div class="portfolio-main">
+            <h2>District-wise Fruit Prices</h2>
+            <div class="row">
+               <div class="col-lg-2 col-sm-6 portfolio-item">
+                  <div class="card h-75">
+                     <div class="card-img">
+                        <a href="#">
+                           <img class="card-img-top" src="static/apple.jpg" alt="" />
+                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
+                        </a>
+                     </div>
+                     <div class="card-body">
+                        <h4 class="card-title">
+                           <a href="apple">Apples</a>
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-sm-6 portfolio-item">
+                  <div class="card h-75">
+                     <div class="card-img">
+                        <a href="#">
+                           <img class="card-img-top" src="static/orange.jpg" alt="" />
+                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
+                        </a>
+                     </div>
+                     <div class="card-body">
+                        <h4 class="card-title">
+                           <a href="orange">Oranges</a>
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-sm-6 portfolio-item">
+                  <div class="card h-75">
+                     <div class="card-img">
+                        <a href="#">
+                           <img class="card-img-top" src="static/jackfruit.jpg" alt="" />
+                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
+                        </a>
+                     </div>
+                     <div class="card-body">
+                        <h4 class="card-title">
+                           <a href="jackfruit">Jackfruit</a>
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-sm-6 portfolio-item">
+                  <div class="card h-75">
+                     <div class="card-img">
+                        <a href="#">
+                           <img class="card-img-top" src="static/papaya.jpg" alt="" />
+                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
+                        </a>
+                     </div>
+                     <div class="card-body">
+                        <h4 class="card-title">
+                           <a href="papaya">Papaya</a>
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-sm-6 portfolio-item">
+                  <div class="card h-75">
+                     <div class="card-img">
+                        <a href="#">
+                           <img class="card-img-top" src="static/pineapple.jpg" alt="" />
+                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
+                        </a>
+                     </div>
+                     <div class="card-body">
+                        <h4 class="card-title">
+                           <a href="pineapple">Pineapple</a>
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+              
+            </div>
+            <!-- /.row -->
+        </div>
+        <hr>
+        
+    </div>
+</center>
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class="footer">
+        
+        
+        <div class="container">
+            <div class="footer-logo">
+				<a href="#"><img src="static/logo.png" alt="" /></a>
+			</div>
+            <!--foote_bottom_ul_amrc ends here-->
+            
+            <ul class="social_footer_ul">
+				<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+    </footer>
+	  
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>NMap Page </title>
+	<!-- Bootstrap core CSS -->
+	<!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+<link href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+	<!-- Fontawesome CSS -->
+	<!--<link href="css/all.css" rel="stylesheet">-->
+		<link href="{{ url_for('static',filename='css/all.css')}}" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<!--<link href="css/style.css" rel="stylesheet">-->
+	<link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+  function chooselocation(param){
+    title = $(param).attr('title');
+    localStorage.setItem('district', title);
+    console.log(title);
+    window.location.href = 'result';
+  }
+</script>
+<style>
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;ropdown-content {
+  display: block;
+
+</style>
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index">
+            <img src="static/logo.png" alt="logo" />
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link active" href="index">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="map">Karnataka Map</a>
+                  </li>
+<li class="nav-item">
+                     <a class="nav-link" href="about">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="upload">Upload</a>
+                  </li>
+
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio">See Prices 
+     
+    </a>
+
+
+<div class="dropdown-content">
+                  <!--   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">-->
+                        <a class="dropdown-item" href="apple">Apple</a>
+                        <a class="dropdown-item" href="orange">Orange</a>
+                        <a class="dropdown-item" href="papaya">Papaya</a>
+                        <a class="dropdown-item" href="pineapple">Pineapple</a>
+                        <a class="dropdown-item" href="jackfruit">Jackfruit</a>
+                     </div>
+                  </li>
+                  
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact">Contact</a>
+                  </li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+
+ <div class="container" style="
+  /* Full height */
+  height: 100%; 
+  */filter: blur(8px);
+  -webkit-filter: blur(8px)*/
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;"> 
+<center>
+<div class="w3-container">
+  <bold> <h2 style="background-image: url('static/mapbg.jpg'); background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4);font-size:50px; color: white;"> KARNATAKA </h2> </bold>
+  <p style="color: black; font-size:18px;">Select District:</p>
+</center>
+ <center>
+      <h1>Select The District</h1>
+    </center>
+
+    <center>
+      <img src="static/Colormap.jpg" usemap="#image-map">
+
+      <map name="image-map">
+        <area target="" alt="chamrajnagar" title="chamrajnagar" onclick="chooselocation($(this))" 
+            coords="249,477,22" shape="circle">
+        <area target="" alt="mysore" title="mysore" onclick="chooselocation($(this))" coords="192,463,20" shape="circle">
+        <area target="" alt="mandya" title="mandya" onclick="chooselocation($(this))" coords="211,428,19" shape="circle">
+        <area target="" alt="kodagu" title="kodagu" onclick="chooselocation($(this))" coords="136,446,17" shape="circle">
+        <area target="" alt="mangalore" title="mangalore" onclick="chooselocation($(this))" coords="102,414,23" shape="circle">
+        <area target="" alt="hassan" title="hassan" onclick="chooselocation($(this))" coords="169,400,26" shape="circle">
+        <area target="" alt="bangalore" title="bangalore" onclick="chooselocation($(this))" coords="269,399,28" shape="circle">
+        <area target="" alt="kolar" title="kolar" onclick="chooselocation($(this))" coords="321,386,26" shape="circle">
+        <area target="" alt="tumkur" title="tumkur" onclick="chooselocation($(this))" coords="216,372,26" shape="circle">
+        <area target="" alt="chitradurga" title="chitradurga" onclick="chooselocation($(this))" coords="191,324,26"
+          shape="circle">
+        <area target="" alt="chickmangalore" title="chickmangalore" onclick="chooselocation($(this))" coords="132,370,24"
+          shape="circle">
+        <area target="" alt="udupi" title="udupi" onclick="chooselocation($(this))" coords="74,359,20" shape="circle">
+        <area target="" alt="shimoga" title="shimoga" onclick="chooselocation($(this))" coords="102,326,24" shape="circle">
+        <area target="" alt="davangere" title="davangere" onclick="chooselocation($(this))" coords="149,297,20" shape="circle">
+        <area target="" alt="haveri" title="haveri" onclick="chooselocation($(this))" coords="114,270,18" shape="circle">
+        <area target="" alt="bellary" title="bellary" onclick="chooselocation($(this))" coords="206,247,23" shape="circle">
+        <area target="" alt="koppal" title="koppal" onclick="chooselocation($(this))" coords="176,212,24" shape="circle">
+        <area target="" alt="gadag" title="gadag" onclick="chooselocation($(this))" coords="134,229,20" shape="circle">
+        <area target="" alt="dharwad" title="dharwad" onclick="chooselocation($(this))" coords="94,223,21" shape="circle">
+        <area target="" alt="uttarakarnataka" title="uttarakarnataka" onclick="chooselocation($(this))" coords="62,270,30"
+          shape="circle">
+        <area target="" alt="belgaum" title="belgaum" onclick="chooselocation($(this))" coords="65,177,35" shape="circle">
+        <area target="" alt="bagalkote" title="bagalkote" onclick="chooselocation($(this))" coords="136,169,20" shape="circle">
+        <area target="" alt="bijapur" title="bijapur" onclick="chooselocation($(this))" coords="158,120,31" shape="circle">
+        <area target="" alt="raichur" title="raichur" onclick="chooselocation($(this))" coords="220,180,28" shape="circle">
+        <area target="" alt="gulbarga" title="gulbarga" onclick="chooselocation($(this))" coords="232,102,41" shape="circle">
+        <area target="" alt="bidar" title="bidar" onclick="chooselocation($(this))" coords="263,41,25" shape="circle">
+      </map>
+    </center>
+</div>
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class="footer">
+        
+        
+        <div class="container">
+            <div class="footer-logo">
+				<a href="#"><img src="static/logo.png" alt="" /></a>
+			</div>
+            <!--foote_bottom_ul_amrc ends here-->
+            
+            <ul class="social_footer_ul">
+				<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+    </footer>
+	  
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
